@@ -13,3 +13,30 @@
  *= require_tree .
  *= require_self
  */
+
+a {
+  text-decoration: none !important;
+  color: rgb(30,30,30);
+}
+
+.blue {
+  color: rgb(1, 123, 254);
+  margin-right: 5px;
+}
+
+.btn-margin {
+  margin-right: 20px;
+  margin-left: 40px;
+}
+
+.review {
+  background-color: rgb(249,249,249);
+  width: 400px;
+  padding: 20px;
+  border-left: 5px solid rgb(1, 123, 254);
+  margin-bottom: 10px;
+}
+
+.yellow {
+  color: rgb(255, 210, 15);
+}

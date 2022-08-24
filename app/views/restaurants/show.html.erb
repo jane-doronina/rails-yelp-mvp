@@ -3,15 +3,19 @@
   <% if @restaurant.phone_number.nil? == false %>
   <p><%= @restaurant.phone_number %></p>
   <% end %>
-  <p><%= @restaurant.address %></p>
-  <%= link_to "Add a review", new_restaurant_review_path(@restaurant) %>
+  <p><i class="blue fa-solid fa-map-pin"></i> <%= @restaurant.address %></p>
+  <%= link_to "Add a review", new_restaurant_review_path(@restaurant), class: "btn btn-primary mt-3" %>
   <br>
-  <%= link_to "Back to all restaurants", restaurants_path %>
+  <div class="mt-4"><i class="fa-solid fa-chevron-left"></i> <%= link_to "Back to all restaurants", restaurants_path %></div>
   <h3 class="mt-4">Reviews</h3>
   <% @restaurant.reviews.each do |review| %>
     <div class="review">
-      <p><%= review.rating %></p>
-      <p><%= review.content %></p>
+      <p>
+      <% review.rating.times do %>
+      <i class="yellow fa-solid fa-star"></i>
+      <% end %>
+      </p>
+      <p><em><%= review.content %></em></p>
     </div>
   <% end %>
 </div>

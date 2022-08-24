@@ -5,5 +5,5 @@
     <%= f.input :content, as: :text %>
     <%= f.button :submit, class: 'btn btn-primary' %>
   <% end %>
-  <%= link_to "Go back", restaurant_path(@restaurant) %>
+  <div class="mt-5"><i class="fa-solid fa-chevron-left"></i> <%= link_to "Go back", restaurant_path(@restaurant) %></div>
 </div>
