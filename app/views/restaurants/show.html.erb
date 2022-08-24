@@ -1,0 +1,17 @@
+<div class="container">
+<h1 class="mt-5"><%= @restaurant.name %></h1>
+  <% if @restaurant.phone_number.nil? == false %>
+  <p><%= @restaurant.phone_number %></p>
+  <% end %>
+  <p><%= @restaurant.address %></p>
+  <%= link_to "Add a review", new_restaurant_review_path(@restaurant) %>
+  <br>
+  <%= link_to "Back to all restaurants", restaurants_path %>
+  <h3 class="mt-4">Reviews</h3>
+  <% @restaurant.reviews.each do |review| %>
+    <div class="review">
+      <p><%= review.rating %></p>
+      <p><%= review.content %></p>
+    </div>
+  <% end %>
+</div>
